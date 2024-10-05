@@ -1,2 +1,2 @@
 # ChatBot
-Welcome to my Python Chatbot project! This chatbot is built to engage users by answering questions and providing assistance on a range of topics. It utilizes natural language processing to interpret user messages and respond appropriately.  Explore the code to see how it works, and feel free to test it out!
+Welcome to the Chatbot Project! This repository contains a Python-based chatbot built using the TensorFlow framework and Natural Language Toolkit (NLTK). The chatbot is designed to engage in meaningful conversations and can be customized to fit various applications.
