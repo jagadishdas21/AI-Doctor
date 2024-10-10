@@ -44,7 +44,7 @@ To customize the chatbot's behavior:
 - Add or modify intents, patterns, and responses according to your needs.
 - Retrain the model using the updated data to improve response accuracy.
 
-## Contributing
+## Contribution
 Contributions are welcome! Please follow these steps to contribute:
 
 - Fork the repository.
