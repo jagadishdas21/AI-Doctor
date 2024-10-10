@@ -14,12 +14,12 @@ This chatbot utilizes machine learning techniques to understand and respond to u
 To set up the chatbot on your local machine, follow these steps:
 
 1. Clone the repository:
-bash $ git clone https://github.com/your-username/ChatBot.git
+bash $ git clone `https://github.com/jagadishdas21/ChatBot.git`
 cd ChatBot
 
 2. Install the required dependencies: It is recommended to use a virtual environment:
 bash $ python -m venv chatbot_env
-source chatbot_env/bin/activate   # On Windows, use `chatbot_env\Scripts\activate`
+source # On Windows, use `chatbot_env\Scripts\activate`
 pip install -r requirements.txt
 
 3. Run the chatbot: bash $ python chatbot.py
