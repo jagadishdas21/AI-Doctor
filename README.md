@@ -1,17 +1,17 @@
-## ChatBot
+# ChatBot
 Welcome to the ChatBot project! This repository contains a Python-based chatbot built using the TensorFlow framework and Natural Language Toolkit (NLTK). The chatbot is designed to engage in meaningful conversations and can be customized to fit various applications.
 
 
-# Project Overview
+## Project Overview
 This chatbot utilizes machine learning techniques to understand and respond to user queries in a natural and conversational manner. It leverages TensorFlow for training a neural network model and NLTK for natural language processing tasks. The chatbot's responses are defined in an intents file, making it easy to modify and adapt the bot's behavior.
 
-# Features
+## Features
 - Natural Language Understanding: Uses NLTK to process and interpret user input.
 - Machine Learning Model: Implements a neural network model using TensorFlow for intent classification.
 - Customizable: Easily modify the bot's responses and behaviors by editing the intents file.
 - Interactive: Engages in conversation with users based on predefined patterns.
 
-# Installation
+## Installation
 To set up the chatbot on your local machine, follow these steps:
 
 1. Clone the repository:
@@ -25,7 +25,7 @@ pip install -r requirements.txt
 
 3. Run the chatbot: bash $ python chatbot.py
    
-# File Descriptions
+## File Descriptions
 - chatbot.py: The main file that runs the chatbot.
 - chatbot_model.h5: The trained neural network model used for intent classification.
 - classes.pkl: Serialized list of unique classes or intents.
@@ -34,18 +34,18 @@ pip install -r requirements.txt
 - pyvenv.cfg: Configuration file for the Python virtual environment.
 - words.pkl: Serialized list of processed words used for training.
 
-# Usage
+## Usage
 - Launch the chatbot using python chatbot.py and interact with it in the terminal.
 - Modify the intents.json file to add new intents or responses as required.
 
-# Customization
+## Customization
 To customize the chatbot's behavior:
 
 - Open the intents.json file.
 - Add or modify intents, patterns, and responses according to your needs.
 - Retrain the model using the updated data to improve response accuracy.
 
-# Contributing
+## Contributing
 Contributions are welcome! Please follow these steps to contribute:
 
 - Fork the repository.
