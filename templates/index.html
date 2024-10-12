@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Doctor</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/logo/robot.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>  
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+        .chat-container {
+            width: 400px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+        }
+        .chat-header {
+            background: #007bff;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px 10px 0 0;
+        }
+        .chat-header img {
+            width: 40px;
+            vertical-align: middle;
+        }
+        .messages {
+            padding: 10px;
+            max-height: 300px;
+            overflow-y: auto;
+            flex-grow: 1;
+        }
+        .message {
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .user-msg {
+            background-color: #007bff;
+            color: white;
+            text-align: right;
+            margin-left: 40%;
+            margin-right: 0;
+        }
+        .bot-msg {
+            background-color: #f1f1f1;
+            text-align: left;
+            margin-right: 40%;
+            margin-left: 0;
+        }
+        .input-container {
+            display: flex;
+            padding: 10px;
+        }
+        input[type="text"] {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 10px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .suggestions {
+            padding: 10px;
+            background-color: #e7e7e7;
+            border-radius: 0 0 10px 10px;
+        }
+        .suggestions p {
+            margin: 0 0 5px 0;
+            font-weight: bold;
+        }
+        .suggestions button {
+            margin: 5px;
+            padding: 8px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .suggestions button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #777;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <img src="/static/logo/robot.png"
+             alt="AI Doctor">
+            <h2>AI Doctor</h2>
+        </div>
+        <div class="messages" id="chatMessages"></div>
+        <div class="input-container">
+            <input type="text" id="userInput" placeholder="Ask me something..." onkeypress="if(event.keyCode == 13) {sendMessage();}">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+        <div class="suggestions">
+            <p>Suggested Questions:</p>
+            <button onclick="sendSuggestion('What are the symptoms of diabetes?')">What are the symptoms of diabetes?</button>
+            <button onclick="sendSuggestion('How can I reduce anxiety?')">How can I reduce anxiety?</button>
+            <button onclick="sendSuggestion('What should I do for a headache?')">What should I do for a headache?</button>
+            <button onclick="sendSuggestion('What are the latest treatments for cancer?')">Latest treatments for cancer?</button>
+            <button onclick="sendSuggestion('How do I know if I have depression?')">How to know if I have depression?</button>
+            <button onclick="sendSuggestion('What should I do if I feel dizzy?')">What to do if I feel dizzy?</button>
+            <button onclick="sendSuggestion('How do I treat a sore throat?')">How to treat a sore throat?</button>
+            <button onclick="sendSuggestion('What can I do for back pain?')">What can I do for back pain?</button>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2024 Jagadish Das | All rights reserved.</p>
+        <p>Designed & Developed by Jagadish Das</p>
+        <a href="mailto:jagadishdas.nitrkl@gmail.com">Contact Me</a>
+    </footer>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
