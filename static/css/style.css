@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #2C2C34; /* Light black background */
+    color: #EAEAEB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0 10px;
+    flex-direction: column;
+}
+
+/* Chat container styling */
+.chat-container {
+    width: 100%;
+    max-width: 500px;
+    background-color: #36363B; /* Dark background */
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column
+}
+
+/* Chat header */
+.chat-header {
+    background-color: #8A5DCA; /* Light purple header */
+    color: #FFC300; /* Dark yellow */
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    border-bottom: 1px solid #494949;
+    position: relative;
+}
+
+.chat-header .logo-container {
+    width: 60px; /* Increase size for better visibility */
+    height: 60px; /* Increase size for better visibility */
+    background-color: #494949; /* Light black circular background */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    position: relative;
+    border: 4px solid white; /* Thick white border */
+    box-sizing: border-box; 
+}
+
+.chat-header .logo-container img {
+    width: 40px;
+}
+
+.chat-header .online-indicator {
+    width: 10px; /* Increase dot size */
+    height: 10px; /* Increase dot size */
+    background-color: #00FF7F; /* Green dot indicating online */
+    border-radius: 50%;
+    position: absolute;
+    top: 40px; /* Adjusted for better visibility */
+    left: 40px; /* Adjusted for better visibility */
+    border: 2px solid #36363B;
+}
+
+/* Messages area */
+.messages {
+    padding: 15px;
+    height: 300px;
+    overflow-y: auto;
+    background-color: #F5F5F5; /* Light grey for messages area */
+    flex-grow: 1;
+    scrollbar-width: thin;
+}
+
+.message {
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+/* User message style */
+.user-msg {
+    background-color: #DCF8C6; /* WhatsApp user message color */
+    color: black;
+    text-align: right;
+    margin-left: 40%;
+    margin-right: 0;
+}
+
+/* Bot message style */
+.bot-msg {
+    background-color: #E4E6EB; /* WhatsApp bot message color */
+    color: black;
+    text-align: left;
+    margin-right: 40%;
+    margin-left: 0;
+}
+
+/* Input field and icon styling */
+.input-container {
+    display: flex;
+    padding: 15px;
+    background-color: #FFFFFF; /* White background */
+    border-top: 1px solid #C5C5C5;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 15px;
+    background-color: #F0F0F0; /* Light grey */
+    color: #333;
+    border: 1px solid #C5C5C5;
+    border-radius: 8px;
+    outline: none;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.icon-container i {
+    font-size: 20px;
+    color: #25D366; /* WhatsApp green */
+    margin-left: 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.icon-container i:hover {
+    color: #128C7E; /* Darker green on hover */
+}
+
+/* Suggestions area */
+.suggestions {
+    padding: 15px;
+    background-color: #FFFFFF; /* White background */
+    color: #333;
+    border-radius: 0 0 12px 12px;
+}
+
+.suggestions p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.suggestions button {
+    padding: 8px;
+    background-color: #25D366; /* WhatsApp green */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 5px 5px 0 0;
+    font-size: 14px;
+}
+
+.suggestions button:hover {
+    background-color: #128C7E; /* Darker green on hover */
+}
+
+/* Footer styling */
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+    background-color: #F5F5F5; /* Light grey */
+    color: #333; /* Dark text */
+    padding: 10px;
+    border-radius: 8px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #25D366; /* WhatsApp green link */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #128C7E; /* Darker green hover effect */
+}
+
+/* Responsiveness */
+
+/* For mobile screens */
+@media (max-width: 600px) {
+    .chat-container {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 0; /* Remove border-radius on mobile */
+    }
+
+    .messages {
+        height: 400px;
+    }
+
+    input[type="text"] {
+        padding: 12px;
+    }
+
+    .icon-container i {
+        font-size: 18px; /* Smaller icons on mobile */
+    }
+}
+
+/* For tablets and small laptops */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .chat-container {
+        width: 95%;
+        max-width: 550px;
+    }
+
+    input[type="text"] {
+        padding: 15px;
+    }
+}
