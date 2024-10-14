@@ -113,8 +113,8 @@ pandas==2.2.2
 pandocfilters==1.5.1
 parso==0.8.4
 partd==1.4.2
-pip==24.2
 pillow==10.3.0
+pip==24.2
 platformdirs==4.2.2
 prometheus_client==0.20.0
 prompt_toolkit==3.0.47
