@@ -155,6 +155,7 @@ stack-data==0.6.3
 tblib==3.0.0
 tensorboard==2.17.1
 tensorboard-data-server==0.7.2
+pip==24.2
 tensorflow==2.17.0
 tensorflow-intel==2.17.0
 tensorflow-model-optimization==0.8.0
